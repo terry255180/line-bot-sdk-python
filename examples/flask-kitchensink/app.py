@@ -802,7 +802,10 @@ def handle_file_message(event):
             )
         )
 
-
+MSG = [{
+      type: 'text',
+      text: '❤️歡迎各位孕媽咪、寶媽咪❤️'
+    }]
 @handler.add(FollowEvent)
 def handle_follow(event):
     app.logger.info("Got Follow event:" + event.source.user_id)
@@ -811,7 +814,8 @@ def handle_follow(event):
         line_bot_api.reply_message(
             ReplyMessageRequest(
                 reply_token=event.reply_token,
-                messages=[TextMessage(text='Got follow event')]
+                #messages=[TextMessage(text='Got follow event')]
+                messages = MSG
             )
         )
 
