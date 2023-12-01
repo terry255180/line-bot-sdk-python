@@ -806,7 +806,15 @@ def handle_file_message(event):
 def handle_follow(event):
     app.logger.info("Got Follow event:" + event.source.user_id)
     with ApiClient(configuration) as api_client:
-        JoinMsg = "Welcome!!"
+        JoinMsg = [{
+                  type: 'text',
+                  text: '❤️歡迎各位孕媽咪、寶媽咪❤️'
+        },
+        {
+          type: 'image',
+          originalContentUrl: "https://i.imgur.com/Rqe5hTF.jpg",
+    	  previewImageUrl: "https://i.imgur.com/Rqe5hTF.jpg"
+        }]
         line_bot_api = MessagingApi(api_client)
         line_bot_api.reply_message(
             ReplyMessageRequest(
