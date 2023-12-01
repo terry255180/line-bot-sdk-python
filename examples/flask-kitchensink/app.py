@@ -806,6 +806,7 @@ def handle_file_message(event):
 def handle_follow(event):
 
         Join_text = "我加入了～"
+        with ApiClient(configuration) as api_client:
         line_bot_api = MessagingApi(api_client)
         line_bot_api.reply_message(
             event.reply_token,
