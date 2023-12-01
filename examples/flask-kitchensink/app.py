@@ -815,7 +815,7 @@ def handle_follow(event):
             ReplyMessageRequest(
                 reply_token=event.reply_token,
                 #messages=[TextMessage(text='Got follow event')]
-                messages = MSG
+                #messages=[TextMessage(text=MSG)]
             )
         )
 
