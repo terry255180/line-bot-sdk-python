@@ -804,16 +804,12 @@ def handle_file_message(event):
 
 @handler.add(FollowEvent)
 def handle_follow(event):
-    app.logger.info("Got Follow event:" + event.source.user_id)
-    with ApiClient(configuration) as api_client:
-        line_bot_api = MessagingApi(api_client)
+
         Join_text = "我加入了～"
+
         line_bot_api.reply_message(
-            ReplyMessageRequest(
-                reply_token=event.reply_token,
-                #messages=[TextMessage(text='Got follow event')]
-                messages=[TextMessage(text=Join_text)]
-            )
+            event.reply_token,
+            TextMessage(text=Join_text)
         )
 
 
