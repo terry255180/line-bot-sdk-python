@@ -813,12 +813,7 @@ def handle_follow(event):
             preview_image_url = "https://i.imgur.com/Rqe5hTF.jpg"
         )
         line_bot_api = MessagingApi(api_client)
-        line_bot_api.reply_message(
-            ReplyMessageRequest(
-                reply_token=event.reply_token,
-                messages=[TextMsg + imgMsg]
-            )
-        )
+        line_bot_api.reply_message(event.reply_token, [TextMsg , imgMsg])
 
 @handler.add(UnfollowEvent)
 def handle_unfollow(event):
