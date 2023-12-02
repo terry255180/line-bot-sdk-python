@@ -812,7 +812,10 @@ def handle_follow(event):
                 reply_token=event.reply_token,
                 messages=[
                     TextMessage(text='❤️歡迎各位孕媽咪、寶媽咪❤️\n加入禾佳藥局中繼站審核群\n《本群組沒有任何活動通知》\n《請審核加入臉書表單群》\n請要審核加入群組媽咪\n"直接私訊小幫手媽咪"審核資料\n1️⃣媽媽手冊審核資格：\n媽媽手冊+預產期內頁+媽媽本人健保卡（請遮/馬身分證字號）\n《限有效孕期內\n🆘生產完請用寶寶手冊審核🆘\n2️⃣寶寶手冊審核資格：\n寶寶手冊+媽媽健保卡\n（寶寶手冊需要填寫家長姓名）\n找下列其中的一位媽媽審核\n@Shu-Lin Wang\n@溫寧\n@Fanny lee\n@周蕎蕎\n@010\n@王靜靜 WJY鴻利童裝\n@Jacqueline\n私訊完畢後請在本群組tag你私訊的小幫手（09:00-22:00）\n小幫手也需要休息，有自己的時間，請勿22:00後私訊\n請務必這邊tag小幫手喔，不然您們的私訊我怕被洗到深海裡QQ\n《審核完畢就可以退出中繼站嘍》\n《審核完畢就可以退出中繼站嘍》\n《本群組沒有任何活動通知》\n《請審核後加入臉書表單群》\n⬇️免費快閃媽媽手冊禮⬇️\n⬇️免費快閃寶寶手冊禮⬇️\n⬇️都在粉專發文快閃限定⬇️\n《各位媽咪記得關注禾佳粉專》\n《按讚+訂閱+追蹤我的最愛》\nhttps://www.facebook.com/%E7%A6%BE%E4%BD%B3%E8%97%A5%E5%B1%80-%E6%96%B0%E8%8E%8A%E6%B0%91%E5%AE%89%E8%A5%BF%E8%B7%AF154%E8%99%9F-298842283885133/'),
-                    ImageMessage(original_content_url = "https://i.imgur.com/Rqe5hTF.jpg",preview_image_url = "https://i.imgur.com/Rqe5hTF.jpg")
+                    ImageMessage(original_content_url = "https://i.imgur.com/Rqe5hTF.jpg",preview_image_url = "https://i.imgur.com/Rqe5hTF.jpg"),
+                    ImageMessage(original_content_url = "https://i.imgur.com/UUaHK5E.jpg",preview_image_url = "https://i.imgur.com/UUaHK5E.jpg"),
+                    ImageMessage(original_content_url = "https://i.imgur.com/k0khHtd.jpg",preview_image_url = "https://i.imgur.com/k0khHtd.jpg"),
+                    ImageMessage(original_content_url = "https://i.imgur.com/wYA4auN.jpg",preview_image_url = "https://i.imgur.com/wYA4auN.jpg")
                 ]
             )
         )
