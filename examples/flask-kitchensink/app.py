@@ -807,7 +807,7 @@ def handle_follow(event):
     app.logger.info("Got Follow event:" + event.source.user_id)
     with ApiClient(configuration) as api_client:
 
-        TextMsg = TextSendMessage(text='TEST')
+        TextMsg = TextSendMessage(text="TEST")
         imgMsg = ImageSendMessage(
             original_content_url = "https://i.imgur.com/Rqe5hTF.jpg",
             preview_image_url = "https://i.imgur.com/Rqe5hTF.jpg"
