@@ -806,14 +806,16 @@ def handle_file_message(event):
 def handle_follow(event):
     app.logger.info("Got Follow event:" + event.source.user_id)
     with ApiClient(configuration) as api_client:
-
-        TextMsg = TextSendMessage(text="TEST")
-        imgMsg = ImageSendMessage(
-            original_content_url = "https://i.imgur.com/Rqe5hTF.jpg",
-            preview_image_url = "https://i.imgur.com/Rqe5hTF.jpg"
-        )
         line_bot_api = MessagingApi(api_client)
-        line_bot_api.reply_message(event.reply_token, [TextMsg , imgMsg])
+        line_bot_api.reply_message(
+            ReplyMessageRequest(
+                reply_token=event.reply_token,
+                messages=[
+                    TextMessage(text='❤️歡迎各位孕媽咪、寶媽咪❤️加入禾佳藥局中繼站審核群'),
+                    ImageMessage(original_content_url = "https://i.imgur.com/Rqe5hTF.jpg",preview_image_url = "https://i.imgur.com/Rqe5hTF.jpg")
+                ]
+            )
+        )
 
 @handler.add(UnfollowEvent)
 def handle_unfollow(event):
