@@ -123,38 +123,7 @@ configuration = Configuration(
     access_token=channel_access_token
 )
 
-
-# function for create tmp dir for download content
-def make_static_tmp_dir():
-    try:
-        os.makedirs(static_tmp_path)
-    except OSError as exc:
-        if exc.errno == errno.EEXIST and os.path.isdir(static_tmp_path):
-            pass
-        else:
-            raise
-
-
-@app.route("/callback", methods=['POST'])
-def callback():
-    # get X-Line-Signature header value
-    signature = request.headers['X-Line-Signature']
-
-    # get request body as text
-    body = request.get_data(as_text=True)
-    app.logger.info("Request body: " + body)
-
-    # handle webhook body
-    try:
-        handler.handle(body, signature)
-    except ApiException as e:
-        app.logger.warn("Got exception from LINE Messaging API: %s\n" % e.body)
-    except InvalidSignatureError:
-        abort(400)
-
-    return 'OK'
-
-@handler.add(FollowEvent)
+#@handler.add(FollowEvent)
 #def handle_follow(event):
 #    app.logger.info("Got Follow event:" + event.source.user_id)
 #    with ApiClient(configuration) as api_client:
