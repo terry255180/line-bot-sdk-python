@@ -123,6 +123,12 @@ configuration = Configuration(
     access_token=channel_access_token
 )
 
+# --- 加這段 ---
+@app.route('/ping', methods=['GET'])
+def ping():
+    return 'I am alive!', 200
+# ---------------
+
 @app.route("/callback", methods=['POST'])
 def callback():
     # get X-Line-Signature header value
